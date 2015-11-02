@@ -17,6 +17,6 @@ cd %Solution%
 
 copy %SetupResources%VisualStudio\launcher.csproj.user.RPiName %Solution%Launcher\launcher.csproj.user /y
 
-start devenv /resetsettings %SetupResources%\VisualStudio\MakerDenSettings.vssettings %Solution%MakerDenWindows.sln
+start "C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv" /resetsettings %SetupResources%\VisualStudio\MakerDenSettings.vssettings %Solution%MakerDenWindows.sln
 
 
