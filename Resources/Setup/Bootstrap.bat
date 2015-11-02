@@ -9,4 +9,4 @@ git clone https://github.com/MakerDen/IoT-Maker-Den-Documentation-and-Guides.git
 
 REM Kick off the Solution Clone
 
-call c:\MakerDen\Resources\Setup\CloneMakerDen %RPiName% %SetupResources% %Solution%
+call c:\MakerDen\Resources\Setup\CloneMakerDen %RPiName%
