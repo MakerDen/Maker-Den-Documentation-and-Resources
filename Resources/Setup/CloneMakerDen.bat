@@ -3,7 +3,6 @@ REM Getting the source code
 SET "SetupResources=c:\MakerDen\Resources\"
 SET "Solution=c:\MakerDen\Source\"
 
-rd /s /q %solution%
 
 git clone https://github.com/MakerDen/IoT-Maker-Den-Windows-for-IoT.git --depth 1 %Solution%
 
@@ -13,9 +12,14 @@ CALL %SetupResources%\Setup\RPiName %~1
 REM copy across the snippets
 CALL %SetupResources%\Setup\Snippets
 
+REM Copy across Desktop shortcuts
+copy "%SetupResources%Shortcuts\*.*"  "%userprofile%\desktop" /y
+
 cd %Solution%
 
 
 copy %SetupResources%VisualStudio\launcher.csproj.user.RPiName %Solution%Launcher\launcher.csproj.user /y
 
-start "Start Visual Studio 2015" /d "C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\" /b  "C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe"  /resetsettings %SetupResources%\VisualStudio\MakerDenSettings.vssettings %Solution%MakerDenWindows.sln
+"C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe" /resetsettings %SetupResources%\VisualStudio\MakerDenSettings.vssettings %Solution%MakerDenWindows.sln
+
+
