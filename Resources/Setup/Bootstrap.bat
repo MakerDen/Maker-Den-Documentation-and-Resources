@@ -5,7 +5,7 @@ SET RPiName=RPiIgnite15
 REM Clone user guide and setup resources
 
 rd /s /q c:\MakerDen
-git clone https://github.com/MakerDen/IoT-Maker-Den-Documentation-and-Guides.git --depth 1 c:\MakerDen
+git clone https://github.com/MakerDen/IoT-Maker-Den-Documentation-and-Resources.git --depth 1 c:\MakerDen
 
 REM Kick off the Solution Clone
 
