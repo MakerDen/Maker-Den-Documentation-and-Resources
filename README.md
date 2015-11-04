@@ -1,5 +1,8 @@
 # Maker Den Documentation and Resources
 
+#Maker Den Source Code
+Source code for the [Maker Den on Windows 10 IoT Core](https://github.com/MakerDen/IoT-Maker-Den-Windows-for-IoT) project. 
+
 ##WINDOWS 10 IOT CORE
 The lab has a dependency on Windows 10 IoT Core version 10.0.10556 and above. At at Nov, 2015, this is the [Insiders Preview](http://ms-iot.github.io/content/en-US/Downloads.htm).
 
