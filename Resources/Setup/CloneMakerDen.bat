@@ -3,6 +3,7 @@ REM Getting the source code
 SET "SetupResources=c:\MakerDen\Resources\"
 SET "Solution=c:\MakerDen\Source\"
 
+rd /s /q %Solution%
 
 git clone https://github.com/MakerDen/IoT-Maker-Den-Windows-for-IoT.git --depth 1 %Solution%
 
