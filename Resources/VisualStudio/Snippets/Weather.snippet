@@ -9,14 +9,22 @@
     <Snippet>
       <Code Language="CSharp">
         <![CDATA[        
-using (SensorMgr tempPressue = new SensorMgr(bmp280TempPressure))
+BMP180Sensor bmpx80 = new BMP180Sensor() { SampleRateMilliseconds = 2000 };
+Glovebox.Graphics.Components.LED8x8Matrix grid = new Glovebox.Graphics.Components.LED8x8Matrix(new Glovebox.Graphics.Drivers.MAX7219(4, Glovebox.Graphics.Drivers.MAX7219.Rotate.None, Glovebox.Graphics.Drivers.MAX7219.Transform.HorizontalFlip));
+
+using (SensorMgr tempPressure = new SensorMgr(bmpx80))
 {
 
-tempPressue.OnAfterMeasurement += OnAfterMeasurement;
-tempPressue.OnBeforeMeasurement += OnBeforeMeasure;
+    tempPressure.OnAfterMeasurement += OnAfterMeasurement;
+    tempPressure.OnBeforeMeasurement += OnBeforeMeasure;
 
-DisplayBmp280(bmp280TempPressure).Wait();
-}           
+    while (true)
+    {
+        var message = String.Format("{0}C, {1}hPa ", Math.Round(bmpx80.Temperature.DegreesCelsius, 1), Math.Round(bmpx80.Pressure.Hectopascals, 1));
+
+        grid.ScrollStringInFromRight(message, 70);
+    }
+}        
             ]]>
       </Code>
     </Snippet>
