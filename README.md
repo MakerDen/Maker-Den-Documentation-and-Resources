@@ -1,5 +1,7 @@
 # Maker Den Documentation and Resources
 
+![Maker Den](https://raw.githubusercontent.com/MakerDen/IoT-Maker-Den-Documentation-and-Resources/master/Resources/Images/MakerDen.jpg)
+
 #Maker Den Source Code
 Source code for the [Maker Den on Windows 10 IoT Core](https://github.com/MakerDen/IoT-Maker-Den-Windows-for-IoT) project. 
 
