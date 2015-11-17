@@ -1,6 +1,6 @@
 SET "SetupResources=c:\MakerDen\Resources\"
 SET "Solution=c:\MakerDen\Source\"
-SET "RPiName=RPiIgnite15"
+SET "RPiName=RPiWinIoT"
 
 REM Clone user guide and setup resources
 
